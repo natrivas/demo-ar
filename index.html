@@ -1,7 +1,7 @@
 
 <html>
   <head>
-    <title>Version 8</title>
+    <title>Version 9</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
@@ -18,8 +18,18 @@
 
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane src="./Póster riot (1).jpg" position="0 0 0" height="2.97" width="2.10" rotation="0 0 0"></a-plane>
+        <a-plane src="./Póster riot (1).jpg" position="0 0 0" height="0.297" width="0.210" rotation="0 0 0"></a-plane>
         <a-gltf-model rotation="0 0 0 " position="0 0 0.1" scale="0.005 0.005 0.005" src="#avatarModel" animation="property: position; to: 0 0.1 0.1; dur: 1000; easing: easeInOutQuad; loop: true; dir: alternate">
+          <a-plane 
+          src="#card" 
+          position="0 0 0" 
+          height="0.297" 
+          width="0.210" 
+          rotation="0 0 0"
+          event-set__click="scale: 1.2 1.2 1.2; color: yellow" 
+          event-set__mouseleave="scale: 1 1 1; color: white"
+          class="clickable"
+          onclick="window.location.href='https://www.instagram.com/nats.realm/'">
       </a-entity>
     </a-scene>
   </body>
